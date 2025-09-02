@@ -3508,4 +3508,178 @@ label {
   object-fit: cover;
 }
 
+/* Gaya untuk halaman Profil Perusahaan */
+.text-grids * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-grids {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Banner */
+.text-grids .banner-area {
+  background: url('../images/banner/banner1.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.text-grids .banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-grids .banner-text {
+  z-index: 1;
+  text-align: center;
+  animation: fadeInDown 1s ease-out;
+}
+
+.text-grids .banner-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Konten Utama */
+.text-grids .main-container {
+  padding: 4rem 1rem;
+}
+
+.text-grids .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-grids .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.text-grids .section-title h2 {
+  font-size: 2.5rem;
+  color: #2a4365;
+  margin-bottom: 1rem;
+}
+
+.text-grids .section-title p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #4a5568;
+}
+
+/* Grid Layout */
+.text-grids .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.text-grids .grid-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: scaleIn 0.8s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-grids .grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text-grids .grid-item h3 {
+  font-size: 1.8rem;
+  color: #2a4365;
+  margin-bottom: 1rem;
+}
+
+.text-grids .grid-item p,
+.text-grids .grid-item li {
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.text-grids .grid-item ol,
+.text-grids .grid-item ul {
+  padding-left: 2rem;
+}
+
+.text-grids .grid-item li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.text-grids footer {
+  background: #2a4365;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Animasi */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .text-grids .banner-title {
+    font-size: 2rem;
+  }
+
+  .text-grids .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .text-grids .grid-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .text-grids .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
 /*# sourceMappingURL=style.css.map */
