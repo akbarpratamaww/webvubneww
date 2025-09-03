@@ -2518,12 +2518,26 @@ img.testimonial-thumb {
 }
 
 /*-- Banner --*/
-.banner-area {
-  position: relative;
-  min-height: 300px;
-  color: #fff;
-  background-position: 50% 50%;
-  background-size: cover;
+/* Full Width Banner CSS */
+#banner-area.banner-area {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ensure banner content stays centered */
+.banner-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* Remove any container constraints for banner */
+body {
+    overflow-x: hidden;
 }
 
 .banner-title {
@@ -3855,6 +3869,56 @@ body.text-grids .banner-title {
   }
 }
 
+/* Adding full-width banner styles */
+#banner-area.banner-area {
+    height: 400px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.banner-text {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.banner-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Add overlay for better text readability */
+#banner-area.banner-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  #banner-area.banner-area {
+    min-height: 200px;
+  }
+}
+
 .filter-section {
   background: white;
   border-radius: 1rem;
@@ -3895,7 +3959,7 @@ body.text-grids .banner-title {
 .filter-btn.active {
   background: #C52D31;
   color: white;
-  border-color: #ffffff;
+  border-color: #C52D31;
   box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
 }
 
@@ -3938,7 +4002,7 @@ body.text-grids .banner-title {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(1, 1, 2, 0.8), rgba(55, 65, 81, 0.8));
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(55, 65, 81, 0.8));
   opacity: 0;
   transition: opacity 0.3s ease;
   display: flex;
@@ -3981,7 +4045,7 @@ body.text-grids .banner-title {
   top: 1rem;
   right: 1rem;
   z-index: 2;
-  background: rgba(99, 102, 241, 0.9);
+  background: #C52D31;
   backdrop-filter: blur(4px);
 }
 
@@ -4139,5 +4203,6 @@ body.text-grids .banner-title {
     text-align: center;
   }
 }
+
 
 /*# sourceMappingURL=style.css.map */
