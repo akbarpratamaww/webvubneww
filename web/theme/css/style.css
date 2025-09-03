@@ -3871,8 +3871,8 @@ body.text-grids .banner-title {
 
 /* Adding full-width banner styles */
 #banner-area.banner-area {
-    height: 400px;
-    min-height: 400px;
+    height: 300px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
