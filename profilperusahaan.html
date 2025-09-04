@@ -1,54 +1,475 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Profil PT Varia Usaha Beton">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Profil Perusahaan - PT Varia Usaha Beton</title>
-  <link rel="stylesheet" href="profilperusahaan.css">
-  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    
+    .header-one,
+.header-one .site-navigation {
+  background: #C52D31;
+}
+
+.header-one .navbar-collapse {
+  padding-left: 0;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse.collapse {
+    overflow-y: auto;
+  }
+}
+
+.header-one ul.navbar-nav > li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+@media (max-width: 991px) {
+  .header-one ul.navbar-nav > li {
+    padding-right: 0;
+  }
+}
+.header-one .logo-area {
+  padding: 30px 0;
+}
+
+.navbar-fixed {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+    /* Main Content Styles */
+    .xyz789-main-wrapper {
+      padding: 80px 0;
+    }
+
+    .xyz789-content-layout {
+      display: grid;
+      gap: 40px;
+    }
+
+    .xyz789-profile-area {
+      background: white;
+      border-radius: 15px;
+      padding: 50px;
+      box-shadow: #555;
+    }
+
+    .xyz789-header-section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .xyz789-header-section h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c5aa0;
+      margin-bottom: 20px;
+    }
+
+    .xyz789-desc-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #666;
+      margin-bottom: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Cards Grid */
+    .xyz789-card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .xyz789-info-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f0f0f0;
+      transition: all 0.3s ease;
+    }
+
+    .xyz789-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .xyz789-card-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .xyz789-icon-style {
+      font-size: 1.8rem;
+      color: #2c5aa0;
+    }
+
+    .xyz789-card-top h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+
+    .xyz789-card-body {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* Mission List Styles */
+    .xyz789-bullet-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .xyz789-bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 15px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .xyz789-bullet-list li:hover {
+      background: #e3f2fd;
+    }
+
+    .xyz789-bullet-list li i {
+      color: #4caf50;
+      font-size: 1.2rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Certification List Styles */
+    .xyz789-cert-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .xyz789-cert-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      padding: 12px;
+      background: #fff3e0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .xyz789-cert-list li:hover {
+      background: #ffe0b2;
+    }
+
+    .xyz789-cert-list li i {
+      color: #ff9800;
+      font-size: 1.1rem;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: #1a1a1a;
+      color: white;
+      margin-top: 80px;
+    }
+
+    .footer-main {
+      padding: 60px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-widget h3 {
+      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .footer-logo {
+      margin-bottom: 20px;
+    }
+
+    .footer-widget p {
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .footer-social ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #2c5aa0;
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: #1e3f73;
+      transform: translateY(-2px);
+    }
+
+    .working-hours {
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .text-right {
+      float: right;
+      color: white;
+      font-weight: 600;
+    }
+
+    .service-list {
+      list-style: none;
+    }
+
+    .service-list li {
+      margin-bottom: 10px;
+    }
+
+    .service-list a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .service-list a:hover {
+      color: #2c5aa0;
+    }
+
+    .service-list a:before {
+      content: "→";
+      margin-right: 8px;
+      color: #2c5aa0;
+    }
+
+    /* Copyright */
+    .copyright {
+      background: #111;
+      padding: 20px 0;
+      border-top: 1px solid #333;
+    }
+
+    .copyright-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .copyright-info {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .copyright-info a {
+      color: #2c5aa0;
+      text-decoration: none;
+    }
+
+    .footer-menu ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      justify-content: flex-end;
+    }
+
+    .footer-menu a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-menu a:hover {
+      color: #2c5aa0;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      z-index: 1000;
+    }
+
+    .back-to-top .btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Updated responsive design for new xyz789- prefixed classes */
+    @media (max-width: 768px) {
+      .top-info-box {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .banner-title {
+        font-size: 2.5rem;
+      }
+
+      .banner-subtitle {
+        font-size: 1.4rem;
+      }
+
+      #banner-area {
+        height: 450px;
+      }
+
+      .xyz789-profile-area {
+        padding: 30px 20px;
+      }
+
+      .xyz789-header-section h2 {
+        font-size: 2.2rem;
+      }
+
+      .xyz789-card-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .copyright-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .footer-menu ul {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      .banner-title {
+        font-size: 2rem;
+      }
+
+      .banner-subtitle {
+        font-size: 1.2rem;
+      }
+
+      #banner-area {
+        height: 400px;
+      }
+
+      .xyz789-header-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .xyz789-info-card {
+        padding: 20px;
+      }
+
+      .xyz789-card-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="body-inner">
     <!-- HEADER -->
     <header id="header" class="header-one">
-      <div class="header-top">
+      <div class="bg-white">
         <div class="container">
           <div class="logo-area">
-            <div class="header-grid">
-              <div class="logo">
-                <a href="index.html">
+            <div class="row align-items-center">
+              <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                <a class="d-block" href="index.html">
                   <img loading="lazy"
                     src="https://3.bp.blogspot.com/-MGLKYSyvDfc/XYi0yjJCPUI/AAAAAAAACEE/LP63l76d69MeaKNonODhe1yh8__zscS8ACK4BGAYYCw/s1600/logo_vub.png"
                     alt="PT Varia Usaha Beton">
                 </a>
               </div>
 
-              <div class="header-info">
-                <div class="info-grid">
-                  <div class="info-box">
-                    <div class="info-content">
-                      <p class="info-title">Hubungi Kami</p>
-                      <p class="info-subtitle">(031) 8841-300</p>
+              <div class="col-lg-9 header-right">
+                <ul class="top-info-box">
+                  <li>
+                    <div class="info-box">
+                      <div class="info-box-content">
+                        <p class="info-box-title">Hubungi Kami</p>
+                        <p class="info-box-subtitle">(031) 8841-300</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="info-box">
-                    <div class="info-content">
-                      <p class="info-title">Email Kami</p>
-                      <p class="info-subtitle">marketing@variabeton.com</p>
+                  </li>
+                  <li>
+                    <div class="info-box">
+                      <div class="info-box-content">
+                        <p class="info-box-title">Email Kami</p>
+                        <p class="info-box-subtitle">marketing@variabeton.com</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="info-box">
-                    <div class="info-content">
-                      <p class="info-title">Sertifikat Global</p>
-                      <p class="info-subtitle">ISO 9001:2015</p>
+                  </li>
+                  <li class="last">
+                    <div class="info-box last">
+                      <div class="info-box-content">
+                        <p class="info-box-title">Sertifikat Global</p>
+                        <p class="info-box-subtitle">ISO 9001:2015</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="header-cta">
+                  </li>
+                  <li class="header-get-a-quote">
                     <a class="btn btn-primary" href="contact.html">Minta Penawaran</a>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -57,180 +478,213 @@
 
       <div class="site-navigation">
         <div class="container">
-          <nav class="navbar">
-            <button class="navbar-toggler" type="button">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse"
+                  aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="navbar-collapse">
-              <ul class="nav-menu">
-                <li class="nav-item dropdown active">
-                  <a href="#" class="nav-link dropdown-toggle">Home <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li class="active"><a href="index.html">Beranda Satu</a></li>
-                    <li><a href="index-2.html">Beranda Dua</a></li>
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav me-auto">
+                    <li class="nav-item dropdown active">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="active"><a href="index.html">Beranda Satu</a></li>
+                        <li><a href="index-2.html">Beranda Dua</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="about.html">About VUB</a></li>
+                        <li><a href="team.html">Company Profile</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Produk <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="betonsiappakai.html">Beton Siap Pakai</a></li>
+                        <li><a href="betonmasonry.html">Beton Masonry</a></li>
+                        <li><a href="betonpracetak.html">Beton Pra Cetak</a></li>
+                        <li><a href="betoninstant.html">Beton Instant BM+</a></li>
+                        <li><a href="batupecah.html">Batu Pecah</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Project</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="lokasi plant.html">lokasi plant</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Media <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="transaksi.html">Transaksi</a></li>
+                        <li><a href="news-left-sidebar.html">Berita dan Acara</a></li>
+                        <li><a href="https://drive.google.com/file/d/1iWUq8nJcYnizwFVpIkJg6sopoo19jp11/view"
+                            target="_blank">Company Profile</a></li>
+                        <li><a href="https://drive.google.com/file/d/1YW-p4J1i4PoEbnCTpB5KDQRl0xMFcW7f/view"
+                            target="_blank">Katalog All Produk</a></li>
+                        <li><a href="https://drive.google.com/file/d/1EeQJIteWADjsQ7Kyc2F8i-Cc38_uOhYw/view"
+                            target="_blank">Katalog Beton Instan</a></li>
+                        <li><a href="https://drive.google.com/file/d/1JupO8Vb3_ww-4VNN78yMg1v_15LV84P8/view"
+                            target="_blank">Katalog Paving Porous</a></li>
+                        <li><a href="https://drive.google.com/file/d/1uDEKUkHNAL5h_W8QmdpwugEJR8ZKHeGL/view"
+                            target="_blank">Katalog Bahan Galian</a></li>
+                        <li><a href="news-left-sidebar.html">Form Permintaan Penawaran Harga</a></li>
+                        <li><a href="news-left-sidebar.html">Form Pengajuan Keagenan</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kuisioner <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSftUIIRdeByKrN3UGwzBB5DKeI7wNOS6fp5dk4Wjd2YDeF5jA/viewform"
+                            target="_blank">Beton Siap Pakai</a></li>
+                        <li><a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSevll1bINqkEhpBt5ut4qcVriZs9t9qHcr1y0JBa68dWFgVig/viewform"
+                            target="_blank">Beton Masonry</a></li>
+                        <li><a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSeWjYUAFOn8W_7ADAwn4yrC9sL5ZwdB94sDTl68ZbqUmVDp2g/viewform"
+                            target="_blank">Beton Pracetak</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                   </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle">Profile <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="about.html">About VUB</a></li>
-                    <li><a href="team.html">Company Profile</a></li>
-                  </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle">Produk <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="betonsiappakai.html">Beton Siap Pakai</a></li>
-                    <li><a href="betonmasonry.html">Beton Masonry</a></li>
-                    <li><a href="betonpracetak.html">Beton Pra Cetak</a></li>
-                    <li><a href="betoninstant.html">Beton Instant BM+</a></li>
-                    <li><a href="batupecah.html">Batu Pecah</a></li>
-                  </ul>
-                </li>
-
-                <li class="nav-item"><a class="nav-link" href="projects.html">Project</a></li>
-                <li class="nav-item"><a class="nav-link" href="lokasi plant.html">lokasi plant</a></li>
-                <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle">Media <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="transaksi.html">Transaksi</a></li>
-                    <li><a href="news-left-sidebar.html">Berita dan Acara</a></li>
-                    <li><a href="https://drive.google.com/file/d/1iWUq8nJcYnizwFVpIkJg6sopoo19jp11/view" target="_blank">Company Profile</a></li>
-                    <li><a href="https://drive.google.com/file/d/1YW-p4J1i4PoEbnCTpB5KDQRl0xMFcW7f/view" target="_blank">Katalog All Produk</a></li>
-                    <li><a href="https://drive.google.com/file/d/1EeQJIteWADjsQ7Kyc2F8i-Cc38_uOhYw/view" target="_blank">Katalog Beton Instan</a></li>
-                    <li><a href="https://drive.google.com/file/d/1JupO8Vb3_ww-4VNN78yMg1v_15LV84P8/view" target="_blank">Katalog Paving Porous</a></li>
-                    <li><a href="https://drive.google.com/file/d/1uDEKUkHNAL5h_W8QmdpwugEJR8ZKHeGL/view" target="_blank">Katalog Bahan Galian</a></li>
-                    <li><a href="news-left-sidebar.html">Form Permintaan Penawaran Harga</a></li>
-                    <li><a href="news-left-sidebar.html">Form Pengajuan Keagenan</a></li>
-                  </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle">Kuisioner <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSftUIIRdeByKrN3UGwzBB5DKeI7wNOS6fp5dk4Wjd2YDeF5jA/viewform" target="_blank">Beton Siap Pakai</a></li>
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSevll1bINqkEhpBt5ut4qcVriZs9t9qHcr1y0JBa68dWFgVig/viewform" target="_blank">Beton Masonry</a></li>
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeWjYUAFOn8W_7ADAwn4yrC9sL5ZwdB94sDTl68ZbqUmVDp2g/viewform" target="_blank">Beton Pracetak</a></li>
-                  </ul>
-                </li>
-
-                <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-              </ul>
+                </div>
+              </nav>
             </div>
+          </div>
 
-            <div class="nav-search">
-              <span id="search"><i class="fa fa-search"></i></span>
-            </div>
+          <div class="nav-search">
+            <span id="search"><i class="fa fa-search"></i></span>
+          </div>
 
-            <div class="search-block">
-              <input type="text" class="search-field" placeholder="Ketik yang Anda cari dan tekan enter">
-              <span class="search-close">&times;</span>
-            </div>
-          </nav>
+          <div class="search-block" style="display: none;">
+            <label for="search-field" class="w-100 mb-0">
+              <input type="text" class="form-control" id="search-field"
+                placeholder="Ketik yang Anda cari dan tekan enter">
+            </label>
+            <span class="search-close">&times;</span>
+          </div>
         </div>
       </div>
     </header>
 
     <!-- BANNER -->
-    <div id="banner-area" class="banner-area">
-      <div class="banner-overlay"></div>
-      <div class="banner-content">
-        <div class="container">
+    <!-- Updated banner to match about.html structure with proper background image -->
+    <div id="banner-area" class="banner-area"
+      style="background-image:url(images/banner/banner1.jpg)">
+      <div class="banner-text">
+        <div class="container text-center">
           <h1 class="banner-title">Profil Perusahaan</h1>
         </div>
       </div>
     </div>
 
     <!-- MAIN CONTENT -->
-    <section id="main-container" class="main-container">
+    <!-- Updated main content section with new class names to avoid conflicts -->
+    <section id="xyz789-main-wrapper" class="xyz789-main-wrapper">
       <div class="container">
-        <div class="content-grid">
+        <div class="xyz789-content-layout">
           <!-- Company Profile Section -->
-          <div class="profile-section">
-            <div class="section-header">
+          <div class="xyz789-profile-area">
+            <div class="xyz789-header-section">
               <h2>Profil Perusahaan</h2>
-              <p class="section-description">
+              <p class="xyz789-desc-text">
                 Seiring dengan pertumbuhan ekonomi yang cukup tinggi dan pesatnya perkembangan sektor konstruksi,
                 khususnya pembangunan infrastruktur dan properti, PT Varia Usaha Beton ikut berpartisipasi melalui
-                usaha penyediaan produk-produk Beton Siap Pakai, Beton Masonry dan Batu Pecah Mesin/base Coarse, serta bahan
+                usaha penyediaan produk-produk Beton Siap Pakai, Beton Masonry dan Batu Pecah Mesin/base Coarse, serta
+                bahan
                 bangunan lainnya yang berbahan baku semen.
               </p>
-              <p class="section-description">
+              <p class="xyz789-desc-text">
                 Dengan didukung staf karyawan yang berpengalaman di bidang beton, peralatan-peralatan yang tepat serta
                 fasilitas group, perusahaan senantiasa mengutamakan kepuasan dan kepercayaan pelanggan, dengan
-                menjamin bahwa produk yang dihasilkan dapat memenuhi mutu yang dipersyaratkan, penyerahan produk tepat waktu
+                menjamin bahwa produk yang dihasilkan dapat memenuhi mutu yang dipersyaratkan, penyerahan produk tepat
+                waktu
                 serta harga yang bersaing.
               </p>
-              <p class="section-description">
+              <p class="xyz789-desc-text">
                 Kami yakin bahwa melalui kegiatan dan jasa kami dapat memperkuat dan mengembangkan hubungan bisnis dan
                 suasana yang kondusif dengan relasi kami di Indonesia maupun luar negeri.
               </p>
             </div>
 
             <!-- Content Cards Grid -->
-            <div class="cards-grid">
+            <div class="xyz789-card-container">
               <!-- Visi Card -->
-              <div class="content-card">
-                <div class="card-header">
-                  <i class="fas fa-eye card-icon"></i>
+              <div class="xyz789-info-card">
+                <div class="xyz789-card-top">
+                  <i class="fas fa-eye xyz789-icon-style"></i>
                   <h3>Visi</h3>
                 </div>
-                <div class="card-content">
+                <div class="xyz789-card-body">
                   <p>Belum tersedia detail visi spesifik dalam dokumen.</p>
                 </div>
               </div>
 
               <!-- Misi Card -->
-              <div class="content-card">
-                <div class="card-header">
-                  <i class="fas fa-target card-icon"></i>
+              <div class="xyz789-info-card">
+                <div class="xyz789-card-top">
+                  <i class="fas fa-target xyz789-icon-style"></i>
                   <h3>Misi</h3>
                 </div>
-                <div class="card-content">
-                  <ul class="mission-list">
+                <div class="xyz789-card-body">
+                  <ul class="xyz789-bullet-list">
                     <li>
                       <i class="fas fa-check-circle"></i>
-                      Memproduksi dan menjual beton yang memenuhi persyaratan pelanggan (tepat mutu, tepat waktu, dan tepat jumlah).
+                      Memproduksi dan menjual beton yang memenuhi persyaratan pelanggan (tepat mutu, tepat waktu, dan
+                      tepat jumlah).
                     </li>
                     <li>
                       <i class="fas fa-check-circle"></i>
-                      Menghasilkan laba untuk mendukung pertumbuhan perusahaan secara berkelanjutan serta meningkatkan kesejahteraan seluruh pemangku kepentingan.
+                      Menghasilkan laba untuk mendukung pertumbuhan perusahaan secara berkelanjutan serta meningkatkan
+                      kesejahteraan seluruh pemangku kepentingan.
                     </li>
                     <li>
                       <i class="fas fa-check-circle"></i>
-                      Menjalankan proses bisnis yang prima dengan dukungan karyawan profesional sesuai perundangan dan peraturan yang berlaku.
+                      Menjalankan proses bisnis yang prima dengan dukungan karyawan profesional sesuai perundangan dan
+                      peraturan yang berlaku.
                     </li>
                   </ul>
                 </div>
               </div>
 
               <!-- Prinsip Manajemen Card -->
-              <div class="content-card">
-                <div class="card-header">
-                  <i class="fas fa-cogs card-icon"></i>
+              <div class="xyz789-info-card">
+                <div class="xyz789-card-top">
+                  <i class="fas fa-cogs xyz789-icon-style"></i>
                   <h3>Prinsip Manajemen</h3>
                 </div>
-                <div class="card-content">
+                <div class="xyz789-card-body">
                   <p>Penerapan manajemen PT Varia Usaha Beton didasarkan pada keyakinan bahwa setiap karyawan memiliki
                     komitmen untuk bekerja sebaik mungkin dan mampu mengambil keputusan yang tepat...</p>
                 </div>
               </div>
 
               <!-- Sertifikat ISO Card -->
-              <div class="content-card">
-                <div class="card-header">
-                  <i class="fas fa-certificate card-icon"></i>
+              <div class="xyz789-info-card">
+                <div class="xyz789-card-top">
+                  <i class="fas fa-certificate xyz789-icon-style"></i>
                   <h3>Sertifikat ISO</h3>
                 </div>
-                <div class="card-content">
-                  <ul class="certification-list">
+                <div class="xyz789-card-body">
+                  <ul class="xyz789-cert-list">
                     <li>
                       <i class="fas fa-award"></i>
                       ISO 14001
@@ -263,16 +717,22 @@
           <div class="footer-grid">
             <div class="footer-widget footer-about">
               <h3 class="widget-title">About Us</h3>
-              <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="PT Varia Usaha Beton">
+              <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png"
+                alt="PT Varia Usaha Beton">
               <p>PT Varia Usaha Beton adalah anak perusahaan PT Semen Indonesia Beton yang memproduksi berbagai macam
-                produk beton seperti BETON SIAP PAKAI, BETON PRACETAK, BETON MASONRY, CRUSHED STONE, JASA KONSTRUKSI, dan
+                produk beton seperti BETON SIAP PAKAI, BETON PRACETAK, BETON MASONRY, CRUSHED STONE, JASA KONSTRUKSI,
+                dan
                 JASA SEWA PERALATAN.</p>
               <div class="footer-social">
                 <ul>
-                  <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                  <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -308,7 +768,8 @@
           <div class="copyright-grid">
             <div class="copyright-info">
               <span>Copyright &copy;
-                <script>document.write(new Date().getFullYear())</script>, Designed &amp; Developed by <a href="https://themefisher.com">Themefisher</a>
+                <script>document.write(new Date().getFullYear())</script>, Designed &amp; Developed by <a
+                  href="https://themefisher.com">Themefisher</a>
               </span>
             </div>
             <div class="footer-menu">
@@ -332,13 +793,16 @@
     </footer>
   </div>
 
+  <!-- Bootstrap JS for navbar functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
     // Simple JavaScript for interactions
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Back to top functionality
       const backToTop = document.getElementById('back-to-top');
-      
-      window.addEventListener('scroll', function() {
+
+      window.addEventListener('scroll', function () {
         if (window.scrollY > 300) {
           backToTop.style.display = 'block';
         } else {
@@ -346,7 +810,7 @@
         }
       });
 
-      backToTop.addEventListener('click', function() {
+      backToTop.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
@@ -356,17 +820,18 @@
       const searchClose = document.querySelector('.search-close');
 
       if (searchToggle) {
-        searchToggle.addEventListener('click', function() {
+        searchToggle.addEventListener('click', function () {
           searchBlock.style.display = searchBlock.style.display === 'block' ? 'none' : 'block';
         });
       }
 
       if (searchClose) {
-        searchClose.addEventListener('click', function() {
+        searchClose.addEventListener('click', function () {
           searchBlock.style.display = 'none';
         });
       }
     });
   </script>
 </body>
+
 </html>
