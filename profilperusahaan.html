@@ -1,619 +1,372 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil Perusahaan - PT Varia Usaha Beton</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Profil Perusahaan PT Varia Usaha Beton">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="plugins/animate-css/animate.css">
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-  <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* Custom styles to ensure compatibility with existing template */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.7;
-      color: #2d3748;
-      background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-    }
-
-    .section-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-
-    .profile-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .grid-item {
-      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-      padding: 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.06);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .grid-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #3182ce, #2b77cb, #1e40af);
-    }
-
-    .grid-item:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .grid-item.featured {
-      grid-column: span 2;
-      background: linear-gradient(145deg, #3182ce 0%, #2c5aa0 100%);
-      color: white;
-    }
-
-    .grid-item.featured::before {
-      background: linear-gradient(90deg, #ffffff, #f7fafc);
-      color: #3182ce;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-title h2 {
-      color: #1a202c;
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #3182ce, #1e40af);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .section-title p {
-      font-size: 1.2rem;
-      color: #4a5568;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    h3 {
-      color: #2d3748;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .grid-item.featured h3 {
-      color: white;
-    }
-
-    .icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      background: linear-gradient(135deg, #3182ce, #1e40af);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .grid-item.featured .icon {
-      background: linear-gradient(135deg, #ffffff, #f7fafc);
-      color: #3182ce;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-      text-align: justify;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      position: relative;
-      padding-left: 2rem;
-      margin-bottom: 0.75rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    ul li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #38a169;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .grid-item.featured ul li::before {
-      color: #68d391;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .stat-item {
-      text-align: center;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 15px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #3182ce;
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 0.9rem;
-      color: #4a5568;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-top: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .profile-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-      
-      .grid-item.featured {
-        grid-column: span 1;
-      }
-      
-      .section-title h2 {
-        font-size: 2.5rem;
-      }
-      
-      .section-container {
-        padding: 2rem 1rem;
-      }
-    }
-
-    /* Animation enhancements */
-    .animate-fade-in {
-      animation: fadeInUp 0.8s ease-out forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .animate-delay-1 { animation-delay: 0.1s; }
-    .animate-delay-2 { animation-delay: 0.2s; }
-    .animate-delay-3 { animation-delay: 0.3s; }
-    .animate-delay-4 { animation-delay: 0.4s; }
-    .animate-delay-5 { animation-delay: 0.5s; }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="profilperusahaan.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
   <div class="body-inner">
     <!-- HEADER -->
     <header id="header" class="header-one">
-      <div class="bg-white">
+      <div class="header-top">
         <div class="container">
           <div class="logo-area">
-            <div class="row align-items-center">
-              <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                <a class="d-block" href="index.html">
-                  <!-- Updated logo alt text -->
+            <div class="header-grid">
+              <div class="logo">
+                <a href="index.html">
                   <img loading="lazy"
                     src="https://3.bp.blogspot.com/-MGLKYSyvDfc/XYi0yjJCPUI/AAAAAAAACEE/LP63l76d69MeaKNonODhe1yh8__zscS8ACK4BGAYYCw/s1600/logo_vub.png"
                     alt="PT Varia Usaha Beton">
                 </a>
-              </div><!-- logo end -->
+              </div>
 
-              <div class="col-lg-9 header-right">
-                <ul class="top-info-box">
-                  <li>
-                    <div class="info-box">
-                      <div class="info-box-content">
-                        <p class="info-box-title">Hubungi Kami</p>
-                        <!-- Updated phone number format for Indonesia -->
-                        <p class="info-box-subtitle">(031) 8841-300</p>
-                      </div>
+              <div class="header-info">
+                <div class="info-grid">
+                  <div class="info-box">
+                    <div class="info-content">
+                      <p class="info-title">Hubungi Kami</p>
+                      <p class="info-subtitle">(031) 8841-300</p>
                     </div>
-                  </li>
-                  <li>
-                    <div class="info-box">
-                      <div class="info-box-content">
-                        <!-- Translated to Indonesian -->
-                        <p class="info-box-title">Email Kami</p>
-                        <p class="info-box-subtitle">marketing@variabeton.com</p>
-                      </div>
+                  </div>
+                  <div class="info-box">
+                    <div class="info-content">
+                      <p class="info-title">Email Kami</p>
+                      <p class="info-subtitle">marketing@variabeton.com</p>
                     </div>
-                  </li>
-                  <li class="last">
-                    <div class="info-box last">
-                      <div class="info-box-content">
-                        <p class="info-box-title">Sertifikat Global</p>
-                        <!-- Updated certification to be more relevant for Indonesian construction -->
-                        <p class="info-box-subtitle">ISO 9001:2015</p>
-                      </div>
+                  </div>
+                  <div class="info-box">
+                    <div class="info-content">
+                      <p class="info-title">Sertifikat Global</p>
+                      <p class="info-subtitle">ISO 9001:2015</p>
                     </div>
-                  </li>
-                  <li class="header-get-a-quote">
-                    <!-- Translated button to Indonesian -->
+                  </div>
+                  <div class="header-cta">
                     <a class="btn btn-primary" href="contact.html">Minta Penawaran</a>
-                  </li>
-                </ul><!-- Ul end -->
-              </div><!-- header right end -->
-            </div><!-- logo area end -->
-
-          </div><!-- Row end -->
-        </div><!-- Container end -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="site-navigation">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
-                  aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+          <nav class="navbar">
+            <button class="navbar-toggler" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div id="navbar-collapse" class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Profile <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="about.html">About VUB</a></li>
-                        <li><a href="profilperusahaan.html">Company Profile</a></li>
-                      </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Produk <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="betonsiappakai.html">Beton Siap Pakai</a></li>
-                        <li><a href="betonmasonry.html">Beton Masonry</a></li>
-                        <li><a href="betonpracetak.html">Beton Pra Cetak</a></li>
-                        <li><a href="betoninstant.html">Beton Instant BM+</a></li>
-                        <li><a href="batupecah.html">Batu Pecah</a></li>
-                      </ul>
-                    </li>
-
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Project</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="lokasi plant.html">lokasi plant</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Media <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="transaksi.html">Transaksi</a></li>
-                        <li><a href="news-left-sidebar.html">Berita dan Acara</a></li>
-                        <li><a href="https://drive.google.com/file/d/1iWUq8nJcYnizwFVpIkJg6sopoo19jp11/view"
-                            target="_blank">Company Profile</a></li>
-                        <li><a href="https://drive.google.com/file/d/1YW-p4J1i4PoEbnCTpB5KDQRl0xMFcW7f/view"
-                            target="_blank">Katalog All Produk</a></li>
-                        <li><a href="https://drive.google.com/file/d/1EeQJIteWADjsQ7Kyc2F8i-Cc38_uOhYw/view"
-                            target="_blank">Katalog Beton Instan</a></li>
-                        <li><a href="https://drive.google.com/file/d/1JupO8Vb3_ww-4VNN78yMg1v_15LV84P8/view"
-                            target="_blank">Katalog Paving Porous</a></li>
-                        <li><a href="https://drive.google.com/file/d/1uDEKUkHNAL5h_W8QmdpwugEJR8ZKHeGL/view"
-                            target="_blank">Katalog Bahan Galian</a></li>
-                        <li><a href="news-left-sidebar.html">Form Permintaan Penawaran Harga</a></li>
-                        <li><a href="news-left-sidebar.html">Form Pengajuan Keagenan</a></li>
-                      </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Kuisioner <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSftUIIRdeByKrN3UGwzBB5DKeI7wNOS6fp5dk4Wjd2YDeF5jA/viewform"
-                            target="_blank">Beton Siap Pakai</a></li>
-                        <li><a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSevll1bINqkEhpBt5ut4qcVriZs9t9qHcr1y0JBa68dWFgVig/viewform"
-                            target="_blank">Beton Masonry</a></li>
-                        <li><a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSeWjYUAFOn8W_7ADAwn4yrC9sL5ZwdB94sDTl68ZbqUmVDp2g/viewform"
-                            target="_blank">Beton Pracetak</a></li>
-                      </ul>
-                    </li>
-
-
-                    <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <div class="navbar-collapse">
+              <ul class="nav-menu">
+                <li class="nav-item dropdown active">
+                  <a href="#" class="nav-link dropdown-toggle">Home <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li class="active"><a href="index.html">Beranda Satu</a></li>
+                    <li><a href="index-2.html">Beranda Dua</a></li>
                   </ul>
-                </div>
-              </nav>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle">Profile <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="about.html">About VUB</a></li>
+                    <li><a href="team.html">Company Profile</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle">Produk <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="betonsiappakai.html">Beton Siap Pakai</a></li>
+                    <li><a href="betonmasonry.html">Beton Masonry</a></li>
+                    <li><a href="betonpracetak.html">Beton Pra Cetak</a></li>
+                    <li><a href="betoninstant.html">Beton Instant BM+</a></li>
+                    <li><a href="batupecah.html">Batu Pecah</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="projects.html">Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="lokasi plant.html">lokasi plant</a></li>
+                <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle">Media <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="transaksi.html">Transaksi</a></li>
+                    <li><a href="news-left-sidebar.html">Berita dan Acara</a></li>
+                    <li><a href="https://drive.google.com/file/d/1iWUq8nJcYnizwFVpIkJg6sopoo19jp11/view" target="_blank">Company Profile</a></li>
+                    <li><a href="https://drive.google.com/file/d/1YW-p4J1i4PoEbnCTpB5KDQRl0xMFcW7f/view" target="_blank">Katalog All Produk</a></li>
+                    <li><a href="https://drive.google.com/file/d/1EeQJIteWADjsQ7Kyc2F8i-Cc38_uOhYw/view" target="_blank">Katalog Beton Instan</a></li>
+                    <li><a href="https://drive.google.com/file/d/1JupO8Vb3_ww-4VNN78yMg1v_15LV84P8/view" target="_blank">Katalog Paving Porous</a></li>
+                    <li><a href="https://drive.google.com/file/d/1uDEKUkHNAL5h_W8QmdpwugEJR8ZKHeGL/view" target="_blank">Katalog Bahan Galian</a></li>
+                    <li><a href="news-left-sidebar.html">Form Permintaan Penawaran Harga</a></li>
+                    <li><a href="news-left-sidebar.html">Form Pengajuan Keagenan</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle">Kuisioner <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSftUIIRdeByKrN3UGwzBB5DKeI7wNOS6fp5dk4Wjd2YDeF5jA/viewform" target="_blank">Beton Siap Pakai</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSevll1bINqkEhpBt5ut4qcVriZs9t9qHcr1y0JBa68dWFgVig/viewform" target="_blank">Beton Masonry</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeWjYUAFOn8W_7ADAwn4yrC9sL5ZwdB94sDTl68ZbqUmVDp2g/viewform" target="_blank">Beton Pracetak</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
             </div>
-            <!--/ Col end -->
-          </div>
-          <!--/ Row end -->
 
-          <div class="nav-search">
-            <span id="search"><i class="fa fa-search"></i></span>
-          </div><!-- Search end -->
+            <div class="nav-search">
+              <span id="search"><i class="fa fa-search"></i></span>
+            </div>
 
-          <div class="search-block" style="display: none;">
-            <label for="search-field" class="w-100 mb-0">
-              <!-- Translated search placeholder to Indonesian -->
-              <input type="text" class="form-control" id="search-field"
-                placeholder="Ketik yang Anda cari dan tekan enter">
-            </label>
-            <span class="search-close">&times;</span>
-          </div><!-- Site search end -->
+            <div class="search-block">
+              <input type="text" class="search-field" placeholder="Ketik yang Anda cari dan tekan enter">
+              <span class="search-close">&times;</span>
+            </div>
+          </nav>
         </div>
-        <!--/ Container end -->
-
       </div>
-      <!--/ Navigation end -->
     </header>
+
     <!-- BANNER -->
-    <div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner1.jpg)">
-      <div class="banner-text">
-        <div class="container text-center">
+    <div id="banner-area" class="banner-area">
+      <div class="banner-overlay"></div>
+      <div class="banner-content">
+        <div class="container">
           <h1 class="banner-title">Profil Perusahaan</h1>
         </div>
       </div>
     </div>
 
-    <section class="section-container">
-      <div class="section-title">
-        <h2>Profil Perusahaan</h2>
-        <p>Membangun masa depan Indonesia dengan solusi beton berkualitas tinggi dan inovasi berkelanjutan</p>
-      </div>
+    <!-- MAIN CONTENT -->
+    <section id="main-container" class="main-container">
+      <div class="container">
+        <div class="content-grid">
+          <!-- Company Profile Section -->
+          <div class="profile-section">
+            <div class="section-header">
+              <h2>Profil Perusahaan</h2>
+              <p class="section-description">
+                Seiring dengan pertumbuhan ekonomi yang cukup tinggi dan pesatnya perkembangan sektor konstruksi,
+                khususnya pembangunan infrastruktur dan properti, PT Varia Usaha Beton ikut berpartisipasi melalui
+                usaha penyediaan produk-produk Beton Siap Pakai, Beton Masonry dan Batu Pecah Mesin/base Coarse, serta bahan
+                bangunan lainnya yang berbahan baku semen.
+              </p>
+              <p class="section-description">
+                Dengan didukung staf karyawan yang berpengalaman di bidang beton, peralatan-peralatan yang tepat serta
+                fasilitas group, perusahaan senantiasa mengutamakan kepuasan dan kepercayaan pelanggan, dengan
+                menjamin bahwa produk yang dihasilkan dapat memenuhi mutu yang dipersyaratkan, penyerahan produk tepat waktu
+                serta harga yang bersaing.
+              </p>
+              <p class="section-description">
+                Kami yakin bahwa melalui kegiatan dan jasa kami dapat memperkuat dan mengembangkan hubungan bisnis dan
+                suasana yang kondusif dengan relasi kami di Indonesia maupun luar negeri.
+              </p>
+            </div>
 
-      <div class="profile-grid">
-        <div class="grid-item featured animate-fade-in animate-delay-1">
-          <h3>
-            <div class="icon">
-              <i class="fas fa-building"></i>
-            </div>
-            Profil Perusahaan
-          </h3>
-          <p>
-            Seiring dengan pertumbuhan ekonomi yang cukup tinggi dan pesatnya perkembangan sektor konstruksi,
-            khususnya pembangunan infrastruktur dan properti, PT Varia Usaha Beton ikut berpartisipasi melalui usaha
-            penyediaan produk-produk Beton Siap Pakai, Beton Masonry dan Batu Pecah Mesin/base Coarse, serta bahan
-            bangunan lainnya yang berbahan baku semen.
-          </p>
-          <p>
-            Dengan didukung staf karyawan yang berpengalaman di bidang beton, peralatan-peralatan yang tepat serta
-            fasilitas group, perusahaan senantiasa mengutamakan kepuasan dan kepercayaan pelanggan, dengan menjamin
-            bahwa produk yang dihasilkan dapat memenuhi mutu yang dipersyaratkan, penyerahan produk tepat waktu serta
-            harga yang bersaing.
-          </p>
-          
-          <div class="stats-grid">
-            <div class="stat-item">
-              <span class="stat-number">34+</span>
-              <span class="stat-label">Tahun Pengalaman</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">1000+</span>
-              <span class="stat-label">Proyek Selesai</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">50+</span>
-              <span class="stat-label">Lokasi Plant</span>
+            <!-- Content Cards Grid -->
+            <div class="cards-grid">
+              <!-- Visi Card -->
+              <div class="content-card">
+                <div class="card-header">
+                  <i class="fas fa-eye card-icon"></i>
+                  <h3>Visi</h3>
+                </div>
+                <div class="card-content">
+                  <p>Belum tersedia detail visi spesifik dalam dokumen.</p>
+                </div>
+              </div>
+
+              <!-- Misi Card -->
+              <div class="content-card">
+                <div class="card-header">
+                  <i class="fas fa-target card-icon"></i>
+                  <h3>Misi</h3>
+                </div>
+                <div class="card-content">
+                  <ul class="mission-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      Memproduksi dan menjual beton yang memenuhi persyaratan pelanggan (tepat mutu, tepat waktu, dan tepat jumlah).
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      Menghasilkan laba untuk mendukung pertumbuhan perusahaan secara berkelanjutan serta meningkatkan kesejahteraan seluruh pemangku kepentingan.
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      Menjalankan proses bisnis yang prima dengan dukungan karyawan profesional sesuai perundangan dan peraturan yang berlaku.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Prinsip Manajemen Card -->
+              <div class="content-card">
+                <div class="card-header">
+                  <i class="fas fa-cogs card-icon"></i>
+                  <h3>Prinsip Manajemen</h3>
+                </div>
+                <div class="card-content">
+                  <p>Penerapan manajemen PT Varia Usaha Beton didasarkan pada keyakinan bahwa setiap karyawan memiliki
+                    komitmen untuk bekerja sebaik mungkin dan mampu mengambil keputusan yang tepat...</p>
+                </div>
+              </div>
+
+              <!-- Sertifikat ISO Card -->
+              <div class="content-card">
+                <div class="card-header">
+                  <i class="fas fa-certificate card-icon"></i>
+                  <h3>Sertifikat ISO</h3>
+                </div>
+                <div class="card-content">
+                  <ul class="certification-list">
+                    <li>
+                      <i class="fas fa-award"></i>
+                      ISO 14001
+                    </li>
+                    <li>
+                      <i class="fas fa-award"></i>
+                      ISO 45001
+                    </li>
+                    <li>
+                      <i class="fas fa-award"></i>
+                      ISO 9001
+                    </li>
+                    <li>
+                      <i class="fas fa-award"></i>
+                      Sertifikasi K3
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="grid-item animate-fade-in animate-delay-2">
-          <h3>
-            <div class="icon">
-              <i class="fas fa-eye"></i>
-            </div>
-            Visi
-          </h3>
-          <p>Menjadi Perusahaan Beton Pilihan Utama Pelanggan di Pasar Nasional dengan standar kualitas internasional dan komitmen terhadap keberlanjutan lingkungan.</p>
-        </div>
-
-        <div class="grid-item animate-fade-in animate-delay-3">
-          <h3>
-            <div class="icon">
-              <i class="fas fa-target"></i>
-            </div>
-            Misi
-          </h3>
-          <ul>
-            <li>Memproduksi & menjual beton yang memenuhi persyaratan pelanggan (tepat mutu, tepat waktu dan tepat jumlah).</li>
-            <li>Menghasilkan laba yang mampu mendukung pertumbuhan perusahaan secara berkelanjutan dan kesejahteraan seluruh pemangku kepentingan.</li>
-            <li>Menjalankan proses bisnis yang prima dengan didukung oleh karyawan yang profesional sesuai dengan perundangan dan peraturan yang berlaku.</li>
-          </ul>
-        </div>
-
-        <div class="grid-item animate-fade-in animate-delay-4">
-          <h3>
-            <div class="icon">
-              <i class="fas fa-users-cog"></i>
-            </div>
-            Prinsip Manajemen
-          </h3>
-          <p>
-            Penerapan manajemen kami didasarkan pada kepercayaan bahwa karyawan mempunyai komitmen untuk bekerja
-            sebaik mungkin dan mampu membuat keputusan yang tepat. Hal ini merupakan keyakinan dari karyawan, bahwa
-            apabila kami menjanjikan produk/jasa yang tepat, berarti mereka telah melakukan hal yang terbaik.
-          </p>
-          <p>
-            Kejujuran dan keterbukaan kami memberikan kontribusi dalam menciptakan rasa memiliki pada karyawan. 
-            Struktur perusahaan yang sederhana memungkinkan komunikasi yang cepat dan akses langsung dengan 
-            pembuat keputusan di semua level.
-          </p>
-        </div>
-
-        <div class="grid-item animate-fade-in animate-delay-5">
-          <h3>
-            <div class="icon">
-              <i class="fas fa-certificate"></i>
-            </div>
-            Sertifikat ISO
-          </h3>
-          <ul>
-            <li>ISO 14001 - Sistem Manajemen Lingkungan</li>
-            <li>ISO 45001 - Sistem Manajemen Keselamatan dan Kesehatan Kerja</li>
-            <li>ISO 9001 - Sistem Manajemen Mutu</li>
-            <li>Sertifikasi K3 - Keselamatan dan Kesehatan Kerja</li>
-          </ul>
         </div>
       </div>
     </section>
 
-    <footer id="footer" class="footer bg-overlay">
+    <!-- FOOTER -->
+    <footer id="footer" class="footer">
       <div class="footer-main">
         <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-lg-4 col-md-6 footer-widget footer-about">
-              <!-- Translated footer content to Indonesian -->
-              <h3 class="widget-title">Tentang Kami</h3>
-              <img loading="lazy" width="200px" class="footer-logo"
-                src="https://3.bp.blogspot.com/-MGLKYSyvDfc/XYi0yjJCPUI/AAAAAAAACEE/LP63l76d69MeaKNonODhe1yh8__zscS8ACK4BGAYYCw/s1600/logo_vub.png"
-                alt="PT Varia Usaha Beton">
-              <!-- Updated footer about us section -->
-              <p>PT Varia Usaha Beton adalah perusahaan konstruksi beton terpercaya yang berkomitmen memberikan solusi
-                berkualitas tinggi dengan standar internasional untuk setiap proyek konstruksi. Dengan pengalaman 34
-                tahun, kami telah menangani berbagai proyek mulai dari residensial, komersial, hingga infrastruktur.</p>
+          <div class="footer-grid">
+            <div class="footer-widget footer-about">
+              <h3 class="widget-title">About Us</h3>
+              <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="PT Varia Usaha Beton">
+              <p>PT Varia Usaha Beton adalah anak perusahaan PT Semen Indonesia Beton yang memproduksi berbagai macam
+                produk beton seperti BETON SIAP PAKAI, BETON PRACETAK, BETON MASONRY, CRUSHED STONE, JASA KONSTRUKSI, dan
+                JASA SEWA PERALATAN.</p>
               <div class="footer-social">
                 <ul>
-                  <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a>
-                  </li>
+                  <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
                 </ul>
-              </div><!-- Footer social end -->
-            </div><!-- Col end -->
-
-            <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-              <!-- Translated working hours section to Indonesian -->
-              <h3 class="widget-title">Jam Kerja</h3>
-              <!-- Updated working hours description to be more professional -->
-              <div class="working-hours">
-                Kami melayani konsultasi dan layanan konstruksi beton 5 hari seminggu. Tim emergency kami siap melayani
-                24 jam untuk keadaan darurat konstruksi. Hubungi kami melalui hotline atau formulir kontak.
-                <br><br> Senin - Jumat: <span class="text-right">07:30 - 16:30</span>
-                <br> Minggu dan hari libur: <span class="text-right">Emergency Only</span>
               </div>
-            </div><!-- Col end -->
+            </div>
 
-            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
-              <!-- Translated services list to Indonesian concrete services -->
-              <h3 class="widget-title">Produk</h3>
-              <ul class="list-arrow">
-                <!-- Updated services list to be more specific for concrete construction -->
-                <li><a href="batupecah.html">Batu Pecah</a></li>
-                <li><a href="betoninstant.html">Beton Instant</a></li>
-                <li><a href="betonmasonry.html">Beton Masonry</a></li>
-                <li><a href="betonpracetak.html">Beton Pra Cetak</a></li>
-                <li><a href="betonsiappakai.html">Beton Siap Pakai</a></li>
+            <div class="footer-widget">
+              <h3 class="widget-title">Working Hours</h3>
+              <div class="working-hours">
+                We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
+                Hotline and Contact form.
+                <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
+                <br> Saturday: <span class="text-right">12:00 - 15:00</span>
+                <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+              </div>
+            </div>
+
+            <div class="footer-widget">
+              <h3 class="widget-title">Services</h3>
+              <ul class="service-list">
+                <li><a href="service-single.html">Beton Siap Pakai</a></li>
+                <li><a href="service-single.html">Beton Pracetak</a></li>
+                <li><a href="service-single.html">Beton Masonry</a></li>
+                <li><a href="service-single.html">Crushed Stone</a></li>
+                <li><a href="service-single.html">Jasa Konstruksi</a></li>
+                <li><a href="service-single.html">Jasa Sewa Peralatan</a></li>
               </ul>
-            </div><!-- Col end -->
-          </div><!-- Row end -->
-        </div><!-- Container end -->
-      </div><!-- Footer main end -->
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="copyright">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <div class="copyright-info">
-                <span>Copyright &copy;
-                  <script>
-                    document.write(new Date().getFullYear())
-                  </script>, Designed &amp; Developed by <a href="https://themefisher.com">Themefisher</a>
-                </span>
-              </div>
+          <div class="copyright-grid">
+            <div class="copyright-info">
+              <span>Copyright &copy;
+                <script>document.write(new Date().getFullYear())</script>, Designed &amp; Developed by <a href="https://themefisher.com">Themefisher</a>
+              </span>
             </div>
-
-            <div class="col-md-6">
-              <div class="footer-menu text-center text-md-right">
-                <ul class="list-unstyled">
-                  <!-- Translated footer menu to Indonesian -->
-                  <li><a href="about.html">Tentang</a></li>
-                  <li><a href="https://drive.google.com/file/d/1YW-p4J1i4PoEbnCTpB5KDQRl0xMFcW7f/view">Produk</a></li>
-                  <li><a href="contact.html">FAQ</a></li>
-                </ul>
-              </div>
+            <div class="footer-menu">
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Our people</a></li>
+                <li><a href="faq.html">Faq</a></li>
+                <li><a href="news-left-sidebar.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+              </ul>
             </div>
-          </div><!-- Row end -->
-
-          <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
-            <button class="btn btn-primary" title="Kembali ke Atas">
-              <i class="fa fa-angle-double-up"></i>
-            </button>
           </div>
+        </div>
+      </div>
 
-        </div><!-- Container end -->
-      </div><!-- Copyright end -->
-    </footer><!-- Footer end -->
-    <script src="plugins/jQuery/jquery.min.js"></script>
-    <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
-    <script src="plugins/slick/slick.min.js"></script>
-    <script src="plugins/slick/slick-animation.min.js"></script>
-    <script src="plugins/colorbox/jquery.colorbox.js"></script>
-    <script src="plugins/shuffle/shuffle.min.js" defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
-    <script src="plugins/google-map/map.js" defer></script>
-    <script src="js/script.js"></script>
+      <div id="back-to-top" class="back-to-top">
+        <button class="btn btn-primary" title="Back to Top">
+          <i class="fa fa-angle-double-up"></i>
+        </button>
+      </div>
+    </footer>
   </div>
-</body>
 
+  <script>
+    // Simple JavaScript for interactions
+    document.addEventListener('DOMContentLoaded', function() {
+      // Back to top functionality
+      const backToTop = document.getElementById('back-to-top');
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTop.style.display = 'block';
+        } else {
+          backToTop.style.display = 'none';
+        }
+      });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Search functionality
+      const searchToggle = document.getElementById('search');
+      const searchBlock = document.querySelector('.search-block');
+      const searchClose = document.querySelector('.search-close');
+
+      if (searchToggle) {
+        searchToggle.addEventListener('click', function() {
+          searchBlock.style.display = searchBlock.style.display === 'block' ? 'none' : 'block';
+        });
+      }
+
+      if (searchClose) {
+        searchClose.addEventListener('click', function() {
+          searchBlock.style.display = 'none';
+        });
+      }
+    });
+  </script>
+</body>
 </html>
