@@ -4371,17 +4371,17 @@ body.text-grids .banner-title {
 }
 
 /* =======================
-   SIMPLE ANIMATIONS
+   SIMPLE ANIMATIONS bertabrakan dengan lokasi plant
    ======================= */
-.animate-fade-in-up {
+.Vub-fade-in-up {
   animation: fadeInUp 1s ease both;
 }
 
-.animate-slide-in-left {
+.Vub-slide-in-left {
   animation: slideInLeft 1s ease both;
 }
 
-.animate-slide-in-right {
+.Vub-slide-in-right {
   animation: slideInRight 1s ease both;
 }
 
