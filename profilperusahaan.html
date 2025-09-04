@@ -11,41 +11,43 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    
     .header-one,
-.header-one .site-navigation {
-  background: #C52D31;
-}
+    .header-one .site-navigation {
+      background: #C52D31;
+    }
 
-.header-one .navbar-collapse {
-  padding-left: 0;
-}
+    .header-one .navbar-collapse {
+      padding-left: 0;
+    }
 
-@media (max-width: 991px) {
-  .navbar-collapse.collapse {
-    overflow-y: auto;
-  }
-}
+    @media (max-width: 991px) {
+      .navbar-collapse.collapse {
+        overflow-y: auto;
+      }
+    }
 
-.header-one ul.navbar-nav > li {
-  padding-left: 0;
-  padding-right: 30px;
-}
-@media (max-width: 991px) {
-  .header-one ul.navbar-nav > li {
-    padding-right: 0;
-  }
-}
-.header-one .logo-area {
-  padding: 30px 0;
-}
+    .header-one ul.navbar-nav>li {
+      padding-left: 0;
+      padding-right: 30px;
+    }
 
-.navbar-fixed {
-  z-index: 9999;
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
+    @media (max-width: 991px) {
+      .header-one ul.navbar-nav>li {
+        padding-right: 0;
+      }
+    }
+
+    .header-one .logo-area {
+      padding: 30px 0;
+    }
+
+    .navbar-fixed {
+      z-index: 9999;
+      position: fixed;
+      width: 100%;
+      top: 0;
+    }
+
     /* Main Content Styles */
     .xyz789-main-wrapper {
       padding: 80px 0;
@@ -71,7 +73,7 @@
     .xyz789-header-section h2 {
       font-size: 2.8rem;
       font-weight: 700;
-      color: #2c5aa0;
+      color: #C52D31;
       margin-bottom: 20px;
     }
 
@@ -118,7 +120,7 @@
 
     .xyz789-icon-style {
       font-size: 1.8rem;
-      color: #2c5aa0;
+      color: #C52D31;
     }
 
     .xyz789-card-top h3 {
@@ -233,14 +235,14 @@
       justify-content: center;
       width: 40px;
       height: 40px;
-      background: #2c5aa0;
+      background: #C52D31;
       color: white;
       border-radius: 50%;
       transition: all 0.3s ease;
     }
 
     .footer-social a:hover {
-      background: #1e3f73;
+      background: #C52D31;
       transform: translateY(-2px);
     }
 
@@ -420,6 +422,10 @@
         text-align: center;
         gap: 10px;
       }
+
+
+      /* Styling untuk Sertifikat */
+
     }
   </style>
 </head>
@@ -587,8 +593,7 @@
 
     <!-- BANNER -->
     <!-- Updated banner to match about.html structure with proper background image -->
-    <div id="banner-area" class="banner-area"
-      style="background-image:url(images/banner/banner1.jpg)">
+    <div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner1.jpg)">
       <div class="banner-text">
         <div class="container text-center">
           <h1 class="banner-title">Profil Perusahaan</h1>
@@ -604,7 +609,6 @@
           <!-- Company Profile Section -->
           <div class="xyz789-profile-area">
             <div class="xyz789-header-section">
-              <h2>Profil Perusahaan</h2>
               <p class="xyz789-desc-text">
                 Seiring dengan pertumbuhan ekonomi yang cukup tinggi dan pesatnya perkembangan sektor konstruksi,
                 khususnya pembangunan infrastruktur dan properti, PT Varia Usaha Beton ikut berpartisipasi melalui
@@ -634,7 +638,7 @@
                   <h3>Visi</h3>
                 </div>
                 <div class="xyz789-card-body">
-                  <p>Belum tersedia detail visi spesifik dalam dokumen.</p>
+                  <p>Menjadi Perusahaan Beton Pilihan Utama Pelanggan di Pasar Nasional.</p>
                 </div>
               </div>
 
@@ -678,119 +682,105 @@
               </div>
 
               <!-- Sertifikat ISO Card -->
-              <div class="xyz789-info-card">
-                <div class="xyz789-card-top">
-                  <i class="fas fa-certificate xyz789-icon-style"></i>
-                  <h3>Sertifikat ISO</h3>
-                </div>
-                <div class="xyz789-card-body">
-                  <ul class="xyz789-cert-list">
-                    <li>
-                      <i class="fas fa-award"></i>
-                      ISO 14001
-                    </li>
-                    <li>
-                      <i class="fas fa-award"></i>
-                      ISO 45001
-                    </li>
-                    <li>
-                      <i class="fas fa-award"></i>
-                      ISO 9001
-                    </li>
-                    <li>
-                      <i class="fas fa-award"></i>
-                      Sertifikasi K3
-                    </li>
-                  </ul>
+                  <div class="iso-cert-section">
+                    <div class="iso-cert-container">
+                      <img src="images/isoo/ISO 14001.jpeg" alt="ISO 14001" class="iso-cert-img">
+                      <img src="images/isoo/ISO 37001.jpeg" alt="ISO 37001" class="iso-cert-img">
+                      <img src="images/isoo/ISO 45001.jpeg" alt="ISO 45001" class="iso-cert-img">
+                      <img src="images/isoo/ISO 9001.jpeg" alt="ISO 9001" class="iso-cert-img">
+                      <img src="images/isoo/ISO K3.jpeg" alt="Sertifikasi K3" class="iso-cert-img">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+  </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer id="footer" class="footer">
-      <div class="footer-main">
-        <div class="container">
-          <div class="footer-grid">
-            <div class="footer-widget footer-about">
-              <h3 class="widget-title">About Us</h3>
-              <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png"
-                alt="PT Varia Usaha Beton">
-              <p>PT Varia Usaha Beton adalah anak perusahaan PT Semen Indonesia Beton yang memproduksi berbagai macam
-                produk beton seperti BETON SIAP PAKAI, BETON PRACETAK, BETON MASONRY, CRUSHED STONE, JASA KONSTRUKSI,
-                dan
-                JASA SEWA PERALATAN.</p>
-              <div class="footer-social">
-                <ul>
-                  <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="footer-widget">
-              <h3 class="widget-title">Working Hours</h3>
-              <div class="working-hours">
-                We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
-                Hotline and Contact form.
-                <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
-                <br> Saturday: <span class="text-right">12:00 - 15:00</span>
-                <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
-              </div>
-            </div>
-
-            <div class="footer-widget">
-              <h3 class="widget-title">Services</h3>
-              <ul class="service-list">
-                <li><a href="service-single.html">Beton Siap Pakai</a></li>
-                <li><a href="service-single.html">Beton Pracetak</a></li>
-                <li><a href="service-single.html">Beton Masonry</a></li>
-                <li><a href="service-single.html">Crushed Stone</a></li>
-                <li><a href="service-single.html">Jasa Konstruksi</a></li>
-                <li><a href="service-single.html">Jasa Sewa Peralatan</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="copyright">
-        <div class="container">
-          <div class="copyright-grid">
-            <div class="copyright-info">
-              <span>Copyright &copy;
-                <script>document.write(new Date().getFullYear())</script>, Designed &amp; Developed by <a
-                  href="https://themefisher.com">Themefisher</a>
-              </span>
-            </div>
-            <div class="footer-menu">
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-widget footer-about">
+            <h3 class="widget-title">About Us</h3>
+            <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png"
+              alt="PT Varia Usaha Beton">
+            <p>PT Varia Usaha Beton adalah anak perusahaan PT Semen Indonesia Beton yang memproduksi berbagai macam
+              produk beton seperti BETON SIAP PAKAI, BETON PRACETAK, BETON MASONRY, CRUSHED STONE, JASA KONSTRUKSI,
+              dan
+              JASA SEWA PERALATAN.</p>
+            <div class="footer-social">
               <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="team.html">Our people</a></li>
-                <li><a href="faq.html">Faq</a></li>
-                <li><a href="news-left-sidebar.html">Blog</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
+                      class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
+                      class="fab fa-instagram"></i></a></li>
+                <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a>
+                </li>
               </ul>
             </div>
           </div>
+
+          <div class="footer-widget">
+            <h3 class="widget-title">Working Hours</h3>
+            <div class="working-hours">
+              We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
+              Hotline and Contact form.
+              <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
+              <br> Saturday: <span class="text-right">12:00 - 15:00</span>
+              <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+            </div>
+          </div>
+
+          <div class="footer-widget">
+            <h3 class="widget-title">Services</h3>
+            <ul class="service-list">
+              <li><a href="service-single.html">Beton Siap Pakai</a></li>
+              <li><a href="service-single.html">Beton Pracetak</a></li>
+              <li><a href="service-single.html">Beton Masonry</a></li>
+              <li><a href="service-single.html">Crushed Stone</a></li>
+              <li><a href="service-single.html">Jasa Konstruksi</a></li>
+              <li><a href="service-single.html">Jasa Sewa Peralatan</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div id="back-to-top" class="back-to-top">
-        <button class="btn btn-primary" title="Back to Top">
-          <i class="fa fa-angle-double-up"></i>
-        </button>
+    <div class="copyright">
+      <div class="container">
+        <div class="copyright-grid">
+          <div class="copyright-info">
+            <span>Copyright &copy;
+              <script>document.write(new Date().getFullYear())</script>, Designed &amp; Developed by <a
+                href="https://themefisher.com">Themefisher</a>
+            </span>
+          </div>
+          <div class="footer-menu">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="team.html">Our people</a></li>
+              <li><a href="faq.html">Faq</a></li>
+              <li><a href="news-left-sidebar.html">Blog</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+
+    <div id="back-to-top" class="back-to-top">
+      <button class="btn btn-primary" title="Back to Top">
+        <i class="fa fa-angle-double-up"></i>
+      </button>
+    </div>
+  </footer>
   </div>
 
   <!-- Bootstrap JS for navbar functionality -->
