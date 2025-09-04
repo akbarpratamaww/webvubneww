@@ -4260,3 +4260,215 @@ body.text-grids .banner-title {
     max-width: 40px; /* Ukuran lebih kecil di mobile */
   }
 }
+
+/*bagian about*/
+/* =======================
+   CUSTOM ABOUT SECTION
+   ======================= */
+.about-hero {
+  background: linear-gradient(rgba(197,45,49,0.8), rgba(0,0,0,0.6)), 
+              url('images/banner/banner1.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 120px 0;
+  text-align: center;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* =======================
+   COMPANY PROFILE
+   ======================= */
+.company-profile {
+  background: #f9f9f9;
+  padding: 80px 0;
+}
+
+.company-profile .profile-content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.company-profile .profile-content:hover {
+  transform: translateY(-5px);
+}
+
+.company-profile h2 {
+  color: #C52D31;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.company-profile p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+/* =======================
+   EXECUTIVE PROFILE
+   ======================= */
+.executive-profile {
+  background: linear-gradient(135deg, #fff 60%, #f1f1f1);
+  padding: 100px 0;
+}
+
+.executive-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.executive-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.executive-image img {
+  border-radius: 50%;
+  border: 5px solid #C52D31;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 25px;
+  transition: transform 0.4s ease;
+}
+
+.executive-card:hover .executive-image img {
+  transform: scale(1.05);
+}
+
+.executive-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #212121;
+}
+
+.executive-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #C52D31;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =======================
+   SIMPLE ANIMATIONS
+   ======================= */
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease both;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 1s ease both;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 1s ease both;
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes slideInLeft {
+  from {opacity: 0; transform: translateX(-50px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+@keyframes slideInRight {
+  from {opacity: 0; transform: translateX(50px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+/* =======================
+   CUSTOM TYPOGRAPHY
+   ======================= */
+
+/* Heading di profile */
+.company-profile h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: #C52D31;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+/* Lead text (paragraf pertama) */
+.company-profile .lead {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Paragraf umum */
+.company-profile p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* Strong text (highlight) */
+.company-profile strong {
+  color: #C52D31;
+  font-weight: 700;
+}
+
+/* bagian ngisor e about */
+
+/* =======================
+   CUSTOM STATS SECTION
+   ======================= */
+.stats-section {
+  background: #191818; /* bisa diganti warna/gradient sesuai branding */
+  padding: 80px 0;
+}
+
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Angka */
+.stat-number {
+  font-size: 40px;
+  font-weight: 800;
+  color: #C52D31;   /* << ganti di sini warna angka */
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Label */
+.stat-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;      /* << ganti di sini warna teks label */
+}
