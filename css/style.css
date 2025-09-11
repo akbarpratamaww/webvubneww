@@ -4623,4 +4623,40 @@ body.text-grids .banner-title {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
+/* === News Banner Slider (Landscape) === */
+#news .news-banner {
+  width: 100%;
+  max-width: 1200px;  /* lebar full */
+  height: 500px;      /* tinggi landscape */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+/* Indicators modern (dalam gambar) */
+#news .overlay-indicators {
+  position: absolute;
+  bottom: 20px; /* jarak dari bawah gambar */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+#news .overlay-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+#news .overlay-indicators .active {
+  background-color: #fff;
+  width: 14px;
+  height: 14px;
+}
+
 
