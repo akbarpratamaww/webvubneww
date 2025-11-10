@@ -1005,16 +1005,15 @@
   </section>
   <!--/ subscribe end -->
 
-  <section id="news" class="news">
+  <!-- <section id="news" class="news">
     <div class="container">
       <div class="row text-center">
         <div class="col-12">
-          <!-- Translated news section titles to Indonesian -->
           <h2 class="section-title">Karya Berkualitas Tinggi</h2>
           <h3 class="section-sub-title">Judul Berita dan Artikel</h3>
         </div>
       </div>
-      <!--/ Title row end -->
+     
 
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4">
@@ -1026,7 +1025,6 @@
             </div>
             <div class="post-body">
               <h4 class="post-title">
-                <!-- Translated news titles to Indonesian concrete industry news -->
                 <a href="news-single.html" class="d-inline-block">PT Varia Usaha Beton Menyelesaikan Proyek Klinik
                   Senilai 17,6 Miliar</a>
               </h4>
@@ -1036,8 +1034,8 @@
                 </span>
               </div>
             </div>
-          </div><!-- Latest post end -->
-        </div><!-- 1st post col end -->
+          </div>
+        </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">
@@ -1057,8 +1055,8 @@
                 </span>
               </div>
             </div>
-          </div><!-- Latest post end -->
-        </div><!-- 2nd post col end -->
+          </div>
+        </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">
@@ -1078,15 +1076,38 @@
                 </span>
               </div>
             </div>
-          </div><!-- Latest post end -->
-        </div><!-- 3rd post col end -->
+          </div>
+        </div>
       </div>
-      <!--/ Content row end -->
 
     <div class="general-btn text-center mt-4">
       <a class="btn btn-primary" href="news-left-sidebar.html">Lihat Semua Berita</a>
     </div>
-  </section>
+  </section> -->
+
+  <section id="news" class="news">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h2 class="section-title">Karya Berkualitas Tinggi</h2>
+        <h3 class="section-sub-title">Judul Berita dan Artikel</h3>
+      </div>
+    </div>
+    <div class="row" id="newsContainer">
+      <!-- Berita akan dimuat di sini -->
+      <div class="col-12 text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3 text-muted">Memuat berita...</p>
+      </div>
+    </div>
+    <div class="general-btn text-center mt-4">
+      <a class="btn btn-primary" href="news-left-sidebar.html">Lihat Semua Berita</a>
+    </div>
+  </div>
+</section>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
@@ -1210,6 +1231,8 @@
 
 <!-- Template custom -->
 <script src="js/script.js"></script>
+
+<script src="js/news-loader.js"></script>
 
 </div><!-- Body inner end -->
 </body>
