@@ -40,7 +40,6 @@
   <!-- Template styles-->
   <link rel="stylesheet" href="css/style.css">
 
-
   <!-- Adding custom CSS to change yellow colors to maroon and adjust font colors -->
   <style>
     /* Override primary button colors from yellow to maroon */
@@ -114,6 +113,122 @@
       background-color: #C52D31 !important;
       border-color: #C52D31 !important;
     }
+    
+    /* CSS untuk Popup Flyer - Sederhana tanpa scroll */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); /* Latar belakang lebih gelap */
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .popup-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .popup-content {
+      position: relative;
+      /* Tidak ada overflow, tidak ada scroll */
+      background-color: transparent; /* Transparan, hanya menampilkan gambar */
+      transform: scale(0.8);
+      transition: transform 0.3s;
+    }
+    
+    .popup-overlay.active .popup-content {
+      transform: scale(1);
+    }
+    
+    .popup-close {
+      position: absolute;
+      top: -15px; /* Posisi di luar gambar */
+      right: -15px; /* Posisi di luar gambar */
+      width: 36px; /* Tombol lebih besar */
+      height: 36px;
+      background-color: #C52D31;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 10000;
+      font-size: 18px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition: all 0.2s;
+    }
+    
+    .popup-close:hover {
+      background-color: #a02529;
+      transform: scale(1.1); /* Efek hover */
+    }
+    
+    .popup-image {
+      display: block;
+      max-width: 90vw; /* Maksimal lebar 90% viewport */
+      max-height: 90vh; /* Maksimal tinggi 90% viewport */
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Media query untuk responsif pada tablet */
+    @media (max-width: 992px) {
+      .popup-image {
+        max-width: 85vw;
+        max-height: 85vh;
+      }
+      
+      .popup-close {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        top: -12px;
+        right: -12px;
+      }
+    }
+    
+    /* Media query untuk responsif pada mobile */
+    @media (max-width: 768px) {
+      .popup-image {
+        max-width: 80vw;
+        max-height: 80vh;
+      }
+      
+      .popup-close {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        top: -10px;
+        right: -10px;
+      }
+    }
+    
+    /* Media query untuk layar sangat kecil */
+    @media (max-width: 480px) {
+      .popup-image {
+        max-width: 95vw;
+        max-height: 85vh;
+      }
+      
+      .popup-close {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+        top: -8px;
+        right: -8px;
+      }
+    }
   </style>
 
 </head>
@@ -122,6 +237,17 @@
   <div class="body-inner">
     <!-- Tempat Header akan dimuat -->
     <div id="header-placeholder"></div>
+
+  <!-- Popup Flyer - Sederhana tanpa scroll -->
+  <div id="popupFlyer" class="popup-overlay">
+    <div class="popup-content">
+      <div class="popup-close" id="closePopup">
+        <i class="fas fa-times"></i>
+      </div>
+      <!-- Menggunakan gambar poster STOP GRATIFIKASI -->
+      <img src="images/poster depan2.PNG" alt="STOP GRATIFIKASI! - Poster PT Varia Usaha Beton" class="popup-image">
+    </div>
+  </div>
 
   <div class="banner-carousel banner-carousel-1 mb-0">
     <div class="banner-carousel-item" style="background-image:url(images/banner/berandautama.jpeg)">
@@ -153,7 +279,7 @@
             <div class="col-md-12">
               <!-- Translated second slider cntent to Indonesian -->
               <h2 class="slide-title-box" data-animation-in="slideInDown">Precast Innovator </h2>
-              <h3 class="slide-title" data-animation-in="fadeIn">Shaping the future with precision, powering Indonesia’s
+              <h3 class="slide-title" data-animation-in="fadeIn">Shaping the future with precision, powering Indonesia's
                 growth</h3>
               <h3 class="slide-sub-title" data-animation-in="slideInLeft">PRECAST</h3>
               <p data-animation-in="slideInRight">
@@ -993,6 +1119,23 @@
   document.addEventListener('DOMContentLoaded', function() {
     loadHTML('header.html', 'header-placeholder');
     loadHTML('footer.html', 'footer-placeholder');
+    
+    // Tampilkan popup flyer saat halaman dimuat
+    setTimeout(function() {
+      document.getElementById('popupFlyer').classList.add('active');
+    }, 1000); // Tampilkan setelah 1 detik
+    
+    // Tutup popup saat tombol close diklik
+    document.getElementById('closePopup').addEventListener('click', function() {
+      document.getElementById('popupFlyer').classList.remove('active');
+    });
+    
+    // Tutup popup saat area di luar konten diklik
+    document.getElementById('popupFlyer').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+      }
+    });
   }); 
 </script>
 <!-- initialize jQuery Library -->
